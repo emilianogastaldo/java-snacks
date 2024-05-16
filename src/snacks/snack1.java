@@ -12,5 +12,7 @@ public class snack1 {
         int num = scanner.nextInt();
         if(num % 2 != 0) System.out.println(num+1);
         else System.out.println(num);
+        scanner.close();
     }
+
 }
