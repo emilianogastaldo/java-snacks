@@ -17,21 +17,12 @@ public class snack7 {
         int hourRest = seconds % 3600;
         int min = hourRest/60;
         int sec = hourRest % 60;
-//        Creo delle stringhe da modificare
-        String hourStr;
-        if(hour < 10) hourStr = "0"+hour;
-        else hourStr = String.valueOf(hour);
-
-        String minStr;
-        if(min < 10) minStr = "0"+min;
-        else minStr = String.valueOf(min);
-
-        String secStr;
-        if(sec < 10) secStr = "0"+sec;
-        else secStr = String.valueOf(sec);
 
 //      Stampo il risultato
-        System.out.println(seconds+" secondi equivalgono a "+hourStr+":"+minStr+":"+secStr);
+        System.out.println(seconds+" secondi equivalgono a "
+                +String.format("%02d", hour)+":"
+                +String.format("%02d", min)+":"
+                +String.format("%02d", sec));
         scanner.close();
     }
 }
